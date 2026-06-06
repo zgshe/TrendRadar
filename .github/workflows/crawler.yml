@@ -28,14 +28,14 @@ on:
     #
     # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     #
-    # 📝 修改运行时间：只改第一个数字（0-59），表示每小时第几分钟运行
-    # 📝 Change time: Only modify the first number (0-59) = minute of each hour
+    # 📝 修改运行时间：UTC 时间（北京时间 = UTC + 8）
+    # 📝 Change time: UTC (Beijing time = UTC + 8)
     #
-    # 示例 / Examples:
-    #   "15 * * * *"     → 每小时第15分钟 / minute 15 every hour
-    #   "30 0-14 * * *"  → 北京时间 8:00-22:00 每小时第30分钟 / Beijing 8am-10pm
+    #   "0 4 * * *"  → 北京时间每天 12:00 / Beijing 12:00 daily
+    #   "0 12 * * *" → 北京时间每天 20:00 / Beijing 20:00 daily
     #
-    - cron: "33 * * * *"
+    - cron: "0 4 * * *"
+    - cron: "0 12 * * *"
 
   workflow_dispatch:
 
